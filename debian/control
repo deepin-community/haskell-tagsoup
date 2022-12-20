@@ -1,0 +1,87 @@
+Source: haskell-tagsoup
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Joachim Breitner <nomeata@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-network-dev,
+ libghc-network-prof,
+Build-Depends-Indep:
+ ghc-doc,
+ libghc-network-doc,
+Standards-Version: 4.5.0
+Homepage: http://community.haskell.org/~ndm/tagsoup/
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-tagsoup
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-tagsoup]
+
+Package: libghc-tagsoup-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Haskell library to robustly parse unstructured HTML
+ TagSoup extracts information out of unstructured HTML code, sometimes
+ known as tag soup. TagSoup does not require well-formed or
+ standards-compliant HTML, or HTML that renders correctly in any
+ particular rendering engine.  TagSoup transforms HTML into a list of
+ open tags with attributes, close tags, and text, but makes no attempt
+ to group these together into any kind of structure.
+ .
+ This package is not related to the Java TagSoup library.
+
+Package: libghc-tagsoup-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Profiling support for TagSoup Haskell library
+ TagSoup extracts information out of unstructured HTML code, sometimes
+ known as tag soup. TagSoup does not require well-formed or
+ standards-compliant HTML, or HTML that renders correctly in any
+ particular rendering engine.  TagSoup transforms HTML into a list of
+ open tags with attributes, close tags, and text, but makes no attempt
+ to group these together into any kind of structure.
+ .
+ This package contains the profiling support for the TagSoup library.
+
+Package: libghc-tagsoup-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Description: Documentation for Haskell TagSoup library
+ TagSoup extracts information out of unstructured HTML code, sometimes
+ known as tag soup. TagSoup does not require well-formed or
+ standards-compliant HTML, or HTML that renders correctly in any
+ particular rendering engine.  TagSoup transforms HTML into a list of
+ open tags with attributes, close tags, and text, but makes no attempt
+ to group these together into any kind of structure.
+ .
+ This package contains the API documentation and example for the TagSoup
+ library.
